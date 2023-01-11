@@ -1,9 +1,10 @@
 {
   "expo": {
     "name": "Reacto",
+    "description": "Nice expo app",
     "slug": "Reacto",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -21,6 +22,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.way.reacto",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -28,6 +30,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8600be51-eb8a-49c8-8779-03ea2df6c007"
+      }
     }
   }
 }

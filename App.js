@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {ImageBackground, StyleSheet} from 'react-native';
+import Trainer from "./src/features/trainer/components/Trainer";
+import {store} from './src/state/store'
+import {Provider} from 'react-redux'
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <Provider store={store}>
+            <ImageBackground source={require('./assets/table-back.png')} style={styles.background}>
+                <Trainer/>
+            </ImageBackground>
+        </Provider>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    background: {
+        width: 793,
+        height: 548
+    }
 });
